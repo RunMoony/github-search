@@ -28,7 +28,6 @@ function GithubProfileLoader() {
           thumbnail={data.avatar_url}
           url={data.html_url}
           followers={data.followers}
-          repos={data.repos_url}
         />
       )}
     </>

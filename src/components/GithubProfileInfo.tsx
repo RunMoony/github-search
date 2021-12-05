@@ -8,7 +8,6 @@ type GithubProfileInfoProps = {
   blog: string;
   url: string;
   followers: number;
-  repos: string;
 };
 
 function GithubProfileInfo({
@@ -18,7 +17,6 @@ function GithubProfileInfo({
   blog,
   url,
   followers,
-  repos,
 }: GithubProfileInfoProps) {
   return (
     <div className='GithubProfileInfo'>
@@ -30,7 +28,6 @@ function GithubProfileInfo({
       <div>{blog !== "" && <a href={blog}>블로그</a>}</div>
       <a href={url}>Github URL</a>
       <div>Followers : {followers}</div>
-      <div>{repos}</div>
     </div>
   );
 }

@@ -7,6 +7,13 @@ export async function getUserProfile(username: string) {
   return response.data;
 }
 
+export async function getUserRepository(username: string) {
+  const response = await axios.get<GithubRepository>(
+    `https://api.github.com/users/${username}/repos`
+  );
+  return response.data;
+}
+
 export type GithubProfile = {
   login: string;
   id: number;
@@ -40,4 +47,9 @@ export type GithubProfile = {
   following: number;
   created_at: Date;
   updated_at: Date;
+};
+
+export type GithubRepository = {
+  name: string;
+  html_url: string;
 };

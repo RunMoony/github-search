@@ -1,6 +1,6 @@
 import { Dispatch } from "redux";
-import { getUserProfile } from "../../api/github";
-import { getUserProfileAsync } from "./actions";
+import { getUserProfile, getUserRepository } from "../../api/github";
+import { getUserProfileAsync, getUserRepositoryAsync } from "./actions";
 
 export function getUserProfileThunk(username: string) {
   return async (dispatch: Dispatch) => {
@@ -9,6 +9,19 @@ export function getUserProfileThunk(username: string) {
     try {
       const userProfile = await getUserProfile(username);
       dispatch(success(userProfile));
+    } catch (e: any) {
+      dispatch(failure(e));
+    }
+  };
+}
+
+export function getUserRepositoryThunk(username: string) {
+  return async (dispatch: Dispatch) => {
+    const { request, success, failure } = getUserRepositoryAsync;
+    dispatch(request());
+    try {
+      const userRepository = await getUserRepository(username);
+      dispatch(success(userRepository));
     } catch (e: any) {
       dispatch(failure(e));
     }
