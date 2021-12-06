@@ -16,9 +16,9 @@ const initialState: GitHubState = {
     data: null,
   },
   userRepository: {
-    loading: false,
-    error: null,
-    data: null,
+    loading2: false,
+    error2: null,
+    data2: null,
   },
 };
 
@@ -50,25 +50,25 @@ const github = createReducer<GitHubState, GithubAction>(initialState, {
   [GET_USER_REPOSITORY]: (state) => ({
     ...state,
     userRepository: {
-      loading: true,
-      error: null,
-      data: null,
+      loading2: true,
+      error2: null,
+      data2: null,
     },
   }),
   [GET_USER_REPOSITORY_SUCCESS]: (state, action) => ({
     ...state,
     userRepository: {
-      loading: false,
-      error: null,
-      data: action.payload,
+      loading2: false,
+      error2: null,
+      data2: action.payload,
     },
   }),
   [GET_USER_REPOSITORY_ERROR]: (state, action) => ({
     ...state,
-    userProfile: {
-      loading: false,
-      error: action.payload,
-      data: null,
+    userRepository: {
+      loading2: false,
+      error2: action.payload,
+      data2: null,
     },
   }),
 });

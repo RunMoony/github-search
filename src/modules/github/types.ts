@@ -10,8 +10,8 @@ export type GitHubState = {
     error: Error | null;
   };
   userRepository: {
-    loading: boolean;
-    data: GithubRepository | null;
-    error: Error | null;
+    loading2: boolean;
+    data2: GithubRepository | null;
+    error2: Error | null;
   };
 };
