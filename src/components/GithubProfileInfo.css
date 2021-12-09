@@ -10,12 +10,37 @@
 
 .GithubProfileInfo .profile-head img {
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 200px;
+  height: 200px;
   border-radius: 32px;
-  margin-right: 16px;
+  margin: 0 auto;
 }
 
-.GethubProfileInfo .profile-head .name {
+.GithubProfileInfo .name {
+  font-size: 30px;
   font-weight: bold;
+  text-align: center;
+}
+
+.GithubProfileInfo p {
+  text-align: center;
+}
+
+.GithubProfileInfo .profile-blog {
+  display: flex;
+  align-items: center;
+}
+
+.GithubProfileInfo .blog {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.remainder {
+  text-align: center;
+}
+
+a:visited {
+  color: black;
 }
