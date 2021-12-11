@@ -29,11 +29,11 @@ function GithubProfileInfo({
         <div>
           {blog !== "" && (
             <a className='blog' href={blog}>
-              블로그
+              blog 바로가기
             </a>
           )}
         </div>
-        <a href={url}>Github URL</a>
+        <a href={url}>GitHub 바로가기</a>
         <div>Followers : {followers}</div>
       </div>
     </div>

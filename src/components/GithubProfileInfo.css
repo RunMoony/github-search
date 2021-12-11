@@ -31,14 +31,12 @@
   align-items: center;
 }
 
-.GithubProfileInfo .blog {
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .remainder {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:visited {
