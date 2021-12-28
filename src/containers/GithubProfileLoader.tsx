@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GithubProfileInfo from "../components/GithubProfileInfo";
-import GithubRepositoryInfo from "../components/GithubRepositoryInfo";
+//import GithubRepositoryInfo from "../components/GithubRepositoryInfo";
 import GithubUsernameForm from "../components/GithubUsernameForm";
 import { RootState } from "../modules";
 import { getUserProfileThunk, getUserRepositoryThunk } from "../modules/github";
@@ -19,7 +19,7 @@ function GithubProfileLoader() {
     dispatch(getUserProfileThunk(username));
     dispatch(getUserRepositoryThunk(username));
   };
-
+  console.log(data2); //repo 데이터
   return (
     <>
       <GithubUsernameForm onSubmitUsername={onSubmitUsername} />
@@ -37,9 +37,10 @@ function GithubProfileLoader() {
       )}
       {loading2 && <p style={{ textAlign: "center" }}>로딩중...</p>}
       {error2 && <p style={{ textAlign: "center" }}>에러 발생!...</p>}
-      {data2 && (
-        <GithubRepositoryInfo name={data2.name} html_url={data2.html_url} />
-      )}
+      {
+        data2 && data2.map((item: any) => <li key={item.id}>{item.name}</li>)
+        //<GithubRepositoryInfo name={data2.name} html_url={data2.html_url} />
+      }
     </>
   );
 }

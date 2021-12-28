@@ -6,7 +6,7 @@ type GithubRepositoryInfoProps = {
 };
 
 function GithubRepositoryInfo({ name, html_url }: GithubRepositoryInfoProps) {
-  return <a href={html_url}>{name}</a>;
+  return <ul></ul>;
 }
 
 export default GithubRepositoryInfo;

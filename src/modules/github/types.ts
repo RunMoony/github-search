@@ -11,7 +11,7 @@ export type GitHubState = {
   };
   userRepository: {
     loading2: boolean;
-    data2: GithubRepository | null;
+    data2: any | GithubRepository | null;
     error2: Error | null;
   };
 };
