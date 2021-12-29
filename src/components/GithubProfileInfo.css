@@ -1,6 +1,7 @@
 .GithubProfileInfo {
   width: 400px;
   margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 .GithubProfileInfo .profile-head {
@@ -20,6 +21,7 @@
   font-size: 30px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .GithubProfileInfo p {
@@ -31,14 +33,23 @@
   align-items: center;
 }
 
-.remainder {
-  text-align: center;
-}
-
 a {
-  text-decoration: none;
+  color: black;
 }
 
-a:visited {
-  color: black;
+a:hover {
+  color: rgba(165, 180, 252, 1);
+}
+
+.title {
+  display: inline-block;
+  border: 1px solid rgba(165, 180, 252, 1);
+  border-radius: 0.5rem;
+  border-width: 1px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-top: 15px;
+  margin-bottom: 0.5rem;
 }

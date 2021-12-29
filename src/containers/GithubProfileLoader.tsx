@@ -19,7 +19,7 @@ function GithubProfileLoader() {
     dispatch(getUserProfileThunk(username));
     dispatch(getUserRepositoryThunk(username));
   };
-  console.log(data2); //repo 데이터
+
   return (
     <>
       <GithubUsernameForm onSubmitUsername={onSubmitUsername} />
@@ -27,6 +27,7 @@ function GithubProfileLoader() {
       {error && <p style={{ textAlign: "center" }}>에러 발생!...</p>}
       {data && (
         <GithubProfileInfo
+          login={data.login}
           bio={data.bio}
           blog={data.blog}
           name={data.name}
@@ -38,8 +39,31 @@ function GithubProfileLoader() {
       {loading2 && <p style={{ textAlign: "center" }}>로딩중...</p>}
       {error2 && <p style={{ textAlign: "center" }}>에러 발생!...</p>}
       {
-        data2 && data2.map((item: any) => <li key={item.id}>{item.name}</li>)
-        //<GithubRepositoryInfo name={data2.name} html_url={data2.html_url} />
+        data2 &&
+          data2.map((item: any) => (
+            <div
+              className='repos'
+              key={item.id}
+              style={{
+                width: "400px",
+                margin: "0 auto",
+                marginBottom: "10px",
+              }}
+            >
+              <a
+                href={item.html_url}
+                style={{
+                  color: "black",
+                }}
+              >
+                {item.name}
+              </a>
+            </div>
+          ))
+        /*<GithubRepositoryInfo
+          name={data2.map((item: any) => item.name)}
+          html_url={data2.map((item: any) => item.html_url)}
+        />*/
       }
     </>
   );
