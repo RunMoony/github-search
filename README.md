@@ -4,5 +4,5 @@
 * [X] REACT-JS
 * [X] redux-thunk
 
-## 구경하기
-URL : [Create React App](https://epl-test.netlify.app/).
+## 스크린샷
+
