@@ -4,5 +4,5 @@
 * [X] REACT-JS
 * [X] redux-thunk
 
-## 스크린샷
-
+## 사이트 바로가기
+https://githubuserfinderwho.netlify.app
